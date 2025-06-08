@@ -13,7 +13,7 @@ router.post("/regdata",regdata)
 
 router.get("/getregdata",getregdata)
 
-router.post("/showreg/delete/:id",deletedata)
+router.post("/showreg/delete/:id",deletedata)   
 
 router.get("/showreg/updateform/:id",updateform)
 router.post("/showreg/update/:id",update)

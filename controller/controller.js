@@ -59,7 +59,7 @@ const getregdata = async (req,res)=>{
 const deletedata=async (req,res)=>{
     await Reg.findByIdAndDelete(req.params.id)
     res.redirect("/")
-}
+}   
 const updateform=async(req,res)=>{
     let up=await Reg.findById(req.params.id)
     res.render("update",{up})
