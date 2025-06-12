@@ -1,12 +1,14 @@
 import express from "express"
 const router=express.Router()
-import{home,about,contact,adddata,subdata,registration,regdata,getregdata,deletedata, updateform, update}from "../controller/controller.js"
+import{home,about,contact,adddata,subdata,registration,regdata,getregdata,deletedata, updateform, update,send_data}from "../controller/controller.js"
 router.get("/",home)
 router.get("/about",about)
 router.get("/contact",contact)
 
 router.get("/adddata",adddata)
 router.post("/subdata",subdata)
+
+router.post("/send_data",send_data)
 
 router.get("/registration",registration)
 router.post("/regdata",regdata)

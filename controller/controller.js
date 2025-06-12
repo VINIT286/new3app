@@ -68,4 +68,10 @@ const update=async(req,res)=>{
     await Reg.findByIdAndUpdate(req.params.id,req.body)
     res.redirect("/getregdata")
 }
-export{home,about,contact,adddata,subdata,registration,regdata,getregdata,deletedata,updateform,update}
+const send_data=(req,res)=>{
+    const {name,email}=req.body;
+    User.create({name,email})
+    res.end()
+}
+export{home,about,contact,adddata,subdata,registration,regdata,getregdata,deletedata,updateform,update,send_data}
+.
